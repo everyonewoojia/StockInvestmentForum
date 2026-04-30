@@ -56,82 +56,150 @@
 
 ## 📂 项目结构设计
 StockInvestmentForum/
-├── frontend/                          # 前端项目（Vue / React）
-│   ├── public/                        # 静态资源
-│   ├── src/
-│   │   ├── assets/                    # 图片 / 样式资源
-│   │   ├── components/                # 通用组件
-│   │   │   ├── common/                # 基础组件（按钮、弹窗等）
-│   │   │   ├── business/              # 业务组件（帖子卡片等）
-│   │   ├── views/                     # 页面级组件
-│   │   │   ├── home/                  # 首页 / Feed流
-│   │   │   ├── forum/                 # 论坛板块页
-│   │   │   ├── post/                  # 帖子详情页
-│   │   │   ├── user/                  # 用户中心
-│   │   │   ├── auth/                  # 登录注册
-│   │   ├── router/                    # 路由配置
-│   │   ├── store/                     # 状态管理（Vuex / Pinia / Redux）
-│   │   ├── api/                       # 接口请求封装
-│   │   ├── utils/                     # 工具函数
-│   │   ├── hooks/                     # 自定义 hooks
-│   │   ├── styles/                    # 全局样式
-│   │   └── main.js                    # 入口文件
-│   ├── package.json
-│   └── vite.config.js / webpack.config.js
 
-├── backend/                           # 后端服务（Node.js / Spring Boot）
-│   ├── src/
-│   │   ├── config/                    # 配置文件（数据库、JWT等）
-│   │   ├── controllers/               # 控制层（处理请求）
-│   │   ├── services/                  # 业务逻辑层
-│   │   ├── models/                    # 数据模型（ORM）
-│   │   ├── routes/                    # 路由定义
-│   │   ├── middlewares/               # 中间件（鉴权、日志、限流）
-│   │   ├── utils/                     # 工具函数
-│   │   ├── constants/                 # 常量定义
-│   │   ├── validators/                # 参数校验
-│   │   ├── sockets/                   # WebSocket（实时讨论/消息）
-│   │   ├── jobs/                      # 定时任务（热榜计算等）
-│   │   └── app.js                     # 应用入口
-│   ├── tests/                         # 单元测试 / 集成测试
-│   ├── logs/                          # 日志文件
-│   ├── package.json
-│   └── .env
+├ frontend/                          # 前端项目（Vue / React）
 
-├── database/                          # 数据库相关
-│   ├── schema.sql                     # 表结构定义
-│   ├── seed.sql                       # 初始数据
-│   ├── migrations/                    # 数据库迁移
-│   └── indexes.sql                    # 索引优化
+│   ├ public/                        # 静态资源
 
-├── docs/                              # 项目文档
-│   ├── api/                           # 接口文档（Swagger / Markdown）
-│   ├── design/                        # 系统设计文档
-│   ├── db/                            # 数据库设计说明
-│   └── requirements.md                # 需求说明书
+│   ├ src/
 
-├── scripts/                           # 脚本工具
-│   ├── deploy.sh                      # 部署脚本
-│   ├── backup.sh                      # 数据备份
-│   └── lint.sh                        # 代码检查
+│   │   ├ assets/                    # 图片 / 样式资源
 
-├── uploads/                           # 用户上传文件（开发环境）
-│   ├── images/                        # 图片
-│   ├── files/                         # PDF / Excel
-│   └── avatars/                       # 用户头像
+│   │   ├ components/                # 通用组件
 
-├── .github/                           # GitHub 配置
-│   ├── workflows/                     # CI/CD（GitHub Actions）
-│   └── ISSUE_TEMPLATE/                # issue 模板
+│   │   │   ├ common/                # 基础组件（按钮、弹窗等）
 
-├── docker/                            # 容器化部署
-│   ├── Dockerfile.frontend
-│   ├── Dockerfile.backend
-│   └── docker-compose.yml
+│   │   │   ├ business/              # 业务组件（帖子卡片等）
 
-├── .gitignore
-├── README.md
-└── LICENSE
+│   │   ├ views/                     # 页面级组件
+
+│   │   │   ├ home/                  # 首页 / Feed流
+
+│   │   │   ├ forum/                 # 论坛板块页
+
+│   │   │   ├ post/                  # 帖子详情页
+
+│   │   │   ├ user/                  # 用户中心
+
+│   │   │   ├ auth/                  # 登录注册
+
+│   │   ├ router/                    # 路由配置
+
+│   │   ├ store/                     # 状态管理（Vuex / Pinia / Redux）
+
+│   │   ├ api/                       # 接口请求封装
+
+│   │   ├ utils/                     # 工具函数
+
+│   │   ├ hooks/                     # 自定义 hooks
+
+│   │   ├ styles/                    # 全局样式
+
+│   │   └ main.js                    # 入口文件
+
+│   ├ package.json
+
+│   └ vite.config.js / webpack.config.js
+
+
+├ backend/                           # 后端服务（Node.js / Spring Boot）
+
+│   ├ src/
+
+│   │   ├ config/                    # 配置文件（数据库、JWT等）
+
+│   │   ├ controllers/               # 控制层（处理请求）
+
+│   │   ├ services/                  # 业务逻辑层
+
+│   │   ├ models/                    # 数据模型（ORM）
+
+│   │   ├ routes/                    # 路由定义
+
+│   │   ├ middlewares/               # 中间件（鉴权、日志、限流）
+
+│   │   ├ utils/                     # 工具函数
+
+│   │   ├ constants/                 # 常量定义
+
+│   │   ├ validators/                # 参数校验
+
+│   │   ├ sockets/                   # WebSocket（实时讨论/消息）
+
+│   │   ├ jobs/                      # 定时任务（热榜计算等）
+
+│   │   └ app.js                     # 应用入口
+
+│   ├ tests/                         # 单元测试 / 集成测试
+
+│   ├ logs/                          # 日志文件
+
+│   ├ package.json
+
+│   └ .env
+
+
+├ database/                          # 数据库相关
+
+│   ├ schema.sql                     # 表结构定义
+
+│   ├ seed.sql                       # 初始数据
+
+│   ├ migrations/                    # 数据库迁移
+
+│   └ indexes.sql                    # 索引优化
+
+
+├ docs/                              # 项目文档
+
+│   ├ api/                           # 接口文档（Swagger / Markdown）
+
+│   ├ design/                        # 系统设计文档
+
+│   ├ db/                            # 数据库设计说明
+
+│   └ requirements.md                # 需求说明书
+
+
+├ scripts/                           # 脚本工具
+
+│   ├ deploy.sh                      # 部署脚本
+
+│   ├ backup.sh                      # 数据备份
+
+│   └ lint.sh                        # 代码检查
+
+
+├ uploads/                           # 用户上传文件（开发环境）
+
+│   ├ images/                        # 图片
+
+│   ├ files/                         # PDF / Excel
+
+│   └ avatars/                       # 用户头像
+
+
+├ .github/                           # GitHub 配置
+
+│   ├ workflows/                     # CI/CD（GitHub Actions）
+
+│   └ ISSUE_TEMPLATE/                # issue 模板
+
+
+├ docker/                            # 容器化部署
+
+│   ├ Dockerfile.frontend
+
+│   ├ Dockerfile.backend
+
+│   └ docker-compose.yml
+
+
+├ .gitignore
+
+├ README.md
+
+└ LICENSE
 
 ## 📂 快速开始
 1.  克隆项目代码：`git clone [(https://github.com/everyonewoojia/StockInvestmentForum.git)]`
