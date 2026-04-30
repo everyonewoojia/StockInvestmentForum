@@ -63,7 +63,7 @@
 ---
 
 ## 📂 快速开始
-1.  克隆项目代码：`git clone [仓库地址]`
+1.  克隆项目代码：`git clone [(https://github.com/everyonewoojia/StockForum.git)]`
 2.  安装依赖：`npm install` 或 `go mod download`
 3.  配置数据库与环境参数。
 4.  启动开发服务器。
