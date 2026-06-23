@@ -1,0 +1,23 @@
+{
+	"pages": [
+		{
+			"path": "pages/Index",
+			"style": {
+				"navigationBarTitleText": "股票基金投资论坛"
+			}
+		},
+		{
+			"path": "pages/Login",
+			"style": {
+				"navigationBarTitleText": "登录注册"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "股票基金投资论坛",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#f4f7f8"
+	},
+	"uniIdRouter": {}
+}
