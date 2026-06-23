@@ -1,0 +1,60 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: investment-forum-backend
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/medicine_assistant?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    time-zone: Asia/Shanghai
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Shanghai
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+app:
+  forum:
+    external-services:
+      sms-provider: ${FORUM_SMS_PROVIDER:aliyun}
+      sms-access-key-id: ${ALIYUN_SMS_ACCESS_KEY_ID:}
+      sms-access-key-secret: ${ALIYUN_SMS_ACCESS_KEY_SECRET:}
+      sms-sign-name: ${ALIYUN_SMS_SIGN_NAME:}
+      email-host: ${SMTP_HOST:}
+      email-username: ${SMTP_USERNAME:}
+      email-password: ${SMTP_PASSWORD:}
+      wechat-client-id: ${WECHAT_OPEN_CLIENT_ID:}
+      wechat-client-secret: ${WECHAT_OPEN_CLIENT_SECRET:}
+      weibo-client-id: ${WEIBO_CLIENT_ID:}
+      weibo-client-secret: ${WEIBO_CLIENT_SECRET:}
+      tencent-face-secret-id: ${TENCENT_FACE_SECRET_ID:}
+      tencent-face-secret-key: ${TENCENT_FACE_SECRET_KEY:}
+      object-storage-endpoint: ${OSS_ENDPOINT:}
+      object-storage-bucket: ${OSS_BUCKET:}
+    search:
+      endpoint: ${FORUM_SEARCH_ENDPOINT:}
+      index-prefix: ${FORUM_SEARCH_INDEX_PREFIX:forum}
+    redis:
+      url: ${FORUM_REDIS_URL:}
+  jwt:
+    secret: ${JWT_SECRET:dev-only-change-this-secret-before-production-please}
+    expiration-minutes: ${JWT_EXPIRE_MINUTES:10080}
+  wechat:
+    appid: ${WECHAT_APPID:}
+    secret: ${WECHAT_SECRET:}
+  tencent:
+    secret-id: ${TENCENT_SECRET_ID:}
+    secret-key: ${TENCENT_SECRET_KEY:}
+    region: ${TENCENT_OCR_REGION:ap-guangzhou}
+  upload:
+    dir: ${UPLOAD_DIR:uploads}

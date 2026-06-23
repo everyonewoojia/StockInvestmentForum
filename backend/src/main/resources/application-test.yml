@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:medicine_assistant;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+
+app:
+  jwt:
+    secret: test-secret-that-is-long-enough-for-hmac-signing
+    expiration-minutes: 60
+  wechat:
+    appid: test-appid
+    secret: test-secret
+  tencent:
+    secret-id: test-secret-id
+    secret-key: test-secret-key
+    region: ap-guangzhou
+  upload:
+    dir: target/test-uploads
