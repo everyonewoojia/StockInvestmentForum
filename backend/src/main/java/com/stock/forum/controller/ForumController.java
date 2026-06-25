@@ -1,7 +1,9 @@
-package com.stock.forum.forum;
+package com.stock.forum.controller;
 
 import com.stock.forum.common.ApiResponse;
 import com.stock.forum.common.PageResponse;
+import com.stock.forum.dto.ForumDtos;
+import com.stock.forum.service.ForumService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

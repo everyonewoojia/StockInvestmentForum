@@ -1,4 +1,4 @@
-package com.stock.forum.forum;
+package com.stock.forum.dto;
 
 import java.util.List;
 
