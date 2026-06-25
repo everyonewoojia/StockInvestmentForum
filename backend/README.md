@@ -101,7 +101,7 @@ frontend/
 
 ```text
 backend/
-├─ src/main/java/com/medicine/assistant/
+├─ src/main/java/com/stock/forum/
 │  ├─ forum/
 │  │  ├─ ForumController.java
 │  │  ├─ ForumService.java
@@ -301,7 +301,7 @@ mvn "-Dmaven.repo.local=D:\medicine-assistant\medicine-assistant\stock-forum-sta
 H2 演示模式：
 
 ```powershell
-cd D:\medicine-assistant\medicine-assistant\stock-forum-standalone\backend
+cd 文件路径
 mvn spring-boot:run -Dspring-boot.run.profiles=test
 ```
 
@@ -322,8 +322,8 @@ http://localhost:8080/api/forum
 第一次运行：
 
 ```powershell
-cd D:\medicine-assistant\medicine-assistant\stock-forum-standalone\frontend
-npm install
+cd 文件路径
+npm.cmd install
 npm.cmd run dev:h5
 ```
 
