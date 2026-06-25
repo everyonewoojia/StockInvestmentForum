@@ -1,4 +1,4 @@
-package com.stock.forum.forum;
+package com.stock.forum.repository;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;

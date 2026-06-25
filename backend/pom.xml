@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.medicine</groupId>
+    <groupId>com.stock</groupId>
     <artifactId>stock-forum-backend</artifactId>
     <version>1.0.0</version>
     <name>stock-forum-backend</name>
@@ -64,6 +64,11 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

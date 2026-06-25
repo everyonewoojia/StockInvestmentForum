@@ -1,10 +1,12 @@
-package com.stock.forum.forum;
+package com.stock.forum.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stock.forum.auth.JwtService;
 import com.stock.forum.common.ApiException;
 import com.stock.forum.common.PageResponse;
+import com.stock.forum.dto.ForumDtos;
+import com.stock.forum.repository.ForumDataAccess;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
